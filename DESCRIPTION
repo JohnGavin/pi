@@ -1,0 +1,30 @@
+Package: coinpi
+Type: Package
+Title: Compute Pi by Coin Flips with Chunked Vectorization
+Version: 0.0.0.9000
+Authors@R: c(
+    person("John", "Gavin", role = c("aut", "cre"),
+           email = "john@example.com")
+  )
+Description: Implements the stopping-time coin-flip construction highlighted
+    in a 2026 post on Statistical Modeling, Causal Inference, and Social
+    Science (based on a short paper by Jim Propp): keep flipping until heads
+    first outnumber tails, record the fraction of heads, and average over
+    repeated runs. The package provides a chunked, vectorized implementation
+    so large simulations can be run with bounded memory.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    cli,
+    rlang,
+    stats
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+URL: https://statmodeling.stat.columbia.edu/2026/02/21/computing-pi-by-flipping-a-coin/

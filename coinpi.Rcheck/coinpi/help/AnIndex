@@ -1,0 +1,4 @@
+coinpi-package	coinpi-package
+coinpi	coinpi-package
+print.coin_pi_estimate	print.coin_pi_estimate
+simulate_coin_pi	simulate_coin_pi

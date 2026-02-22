@@ -1,0 +1,3 @@
+print.coin_pi_estimate
+                        Print a 'coin_pi_estimate'
+simulate_coin_pi        Estimate Pi by Stopping-Time Coin Flips

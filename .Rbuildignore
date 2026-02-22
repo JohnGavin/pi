@@ -1,0 +1,9 @@
+^\.Rproj\.user$
+^\.Rhistory$
+^\.RData$
+^\.Ruserdata$
+^nix-shell-root$
+^default\.R$
+^default\.nix$
+^default\.sh$
+^default-ci\.nix$
