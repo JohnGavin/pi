@@ -2,6 +2,8 @@
 ^\.Rhistory$
 ^\.RData$
 ^\.Ruserdata$
+^\.DS_Store$
+^AGENTS\.md$
 ^nix-shell-root$
 ^default\.R$
 ^default\.nix$

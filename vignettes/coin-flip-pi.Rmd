@@ -29,6 +29,23 @@ The theorem in the note states that:
 
 so `4 * mean(H_tau / tau)` estimates `pi`.
 
+## General Threshold View (`p` Instead of `1/2`)
+
+The same stopping-time idea can be written with a threshold `p in (0, 1)`:
+
+1. Stop at `tau_p = inf{n >= 1: H_n / n > p}`.
+2. Record `R_p = H_{tau_p} / tau_p`.
+3. Repeat and average.
+
+Useful boundary cases:
+
+- At `p = 0`, you stop at the first head, so `E[R_0] = log(2)`.
+- At `p = 1/2`, Propp's result gives `E[R_{1/2}] = pi/4`.
+
+For `p <= 1/2`, the crossing occurs almost surely, so repeated simulation is
+straightforward. For `p > 1/2`, crossing has probability less than 1, so
+simulations usually need conditioning on successful crossing (`tau_p < Inf`).
+
 ## Why Chunked Vectorization?
 
 A direct `while` loop over one trial at a time is simple but slow in R. This
@@ -46,8 +63,8 @@ time, then folds those results into the global estimate before moving on.
 
 ```{r}
 fit <- simulate_coin_pi(
-  n_sims = 2000L,
-  chunk_size = 500L,
+  n_sims = 500L,
+  chunk_size = 100L,
   seed = 123,
   progress = FALSE
 )

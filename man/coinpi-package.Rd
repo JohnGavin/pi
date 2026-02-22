@@ -10,13 +10,6 @@ Implements the stopping-time simulation described in Jim Propp's 2026
 note: for each trial, flip a fair coin until heads first outnumber tails,
 record \code{H_tau / tau}, and use \code{4 * mean(H_tau / tau)} to estimate \code{pi}.
 }
-\seealso{
-Useful links:
-\itemize{
-  \item \url{https://statmodeling.stat.columbia.edu/2026/02/21/computing-pi-by-flipping-a-coin/}
-}
-
-}
 \author{
 \strong{Maintainer}: John Gavin \email{john@example.com}
 

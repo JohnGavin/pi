@@ -39,7 +39,7 @@ tails. Record \code{H_tau / tau} for that trial. Across many trials,
 \code{4 * mean(H_tau / tau)} estimates \code{pi}.
 }
 \examples{
-fit <- simulate_coin_pi(n_sims = 500L, chunk_size = 100L, seed = 123)
+fit <- simulate_coin_pi(n_sims = 100L, chunk_size = 20L, seed = 123)
 fit
 
 }
