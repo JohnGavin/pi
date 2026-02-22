@@ -9,7 +9,19 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
-library(coinpi)
+if (requireNamespace("coinpi", quietly = TRUE)) {
+  library(coinpi)
+} else {
+  candidates <- c(
+    file.path("R", "simulate_coin_pi.R"),
+    file.path("..", "R", "simulate_coin_pi.R")
+  )
+  src <- candidates[file.exists(candidates)][1]
+  if (is.na(src)) {
+    stop("Cannot locate R/simulate_coin_pi.R for vignette fallback loading.")
+  }
+  source(src)
+}
 ```
 
 ## Background
